@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import Header from './compontnts/Header';
 import About from './compontnts/About';
 import Contact from './compontnts/Contact';
-import User from './compontnts/User';
 import Antor from './compontnts/Antor';
+import UserAll from './compontnts/user/UserAll';
+import Users from './compontnts/user/Users';
 
 const router = createBrowserRouter([
   {
@@ -20,11 +20,16 @@ const router = createBrowserRouter([
         children: [
           {
             path: 'user',
-            element: <User></User>,
+            element: <Users></Users>,
             children: [
               {
                 path: 'antor',
                 element: <Antor></Antor>
+              },
+              {
+                path: 'userall',
+                loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+                element: <UserAll></UserAll>
               }
             ]
           }
