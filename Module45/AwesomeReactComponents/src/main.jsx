@@ -8,18 +8,19 @@ import Contact from './compontnts/Contact';
 import Antor from './compontnts/Antor';
 import UserAll from './compontnts/user/UserAll';
 import Users from './compontnts/user/Users';
+import UserDetails from './compontnts/user/UserDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App> ,
+    element: <App></App>,
     children: [
       {
         path: 'about',
         element: <About></About>,
         children: [
           {
-            path: 'user',
+            path: 'users',
             element: <Users></Users>,
             children: [
               {
@@ -29,10 +30,15 @@ const router = createBrowserRouter([
               {
                 path: 'userall',
                 loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
-                element: <UserAll></UserAll>
-              }
+                element: <UserAll></UserAll>,
+              },
+              {
+                path: 'userall/:userId',
+                loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+                element: <UserDetails></UserDetails>
+              },
             ]
-          }
+          },
         ]
       },
       {

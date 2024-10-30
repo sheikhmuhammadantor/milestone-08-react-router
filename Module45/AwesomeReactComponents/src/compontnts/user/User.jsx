@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom"
 import PageTitle from "../../utility/PageTitle"
 
@@ -7,8 +8,9 @@ const User = ({user}) => {
         <PageTitle title={"User"}></PageTitle>
         <p className="text-xl">User Name: {user.name}</p>
         <p className="text-xl">User Web: {user.website}</p>
-        <Link to="">
-        <button className="btn m-2">Details</button></Link>
+        <Link to={`${user.id}`}>
+        <button className="btn m-2">Details</button>
+        </Link>
     </div>
   )
 }

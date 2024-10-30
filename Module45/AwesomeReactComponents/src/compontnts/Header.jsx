@@ -10,8 +10,8 @@ export default function Header() {
         <Link to='/' className="border p-2 rounded-xl px-5">Home</Link>
         <Link to='contact' className="border p-2 rounded-xl px-5">Contact</Link>
         <Link to='about' className="border p-2 rounded-xl px-5">About</Link>
-        <Link to='about/user' className="border p-2 rounded-xl px-5">User</Link>
-        <Link to='about/user/antor' className="border p-2 rounded-xl px-5">Antor</Link>
+        <Link to='about/users' className="border p-2 rounded-xl px-5">User</Link>
+        <Link to='about/users/antor' className="border p-2 rounded-xl px-5">Antor</Link>
       </nav>
     </div>
   )
