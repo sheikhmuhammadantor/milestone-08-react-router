@@ -10,6 +10,8 @@ import UserAll from './compontnts/user/UserAll';
 import Users from './compontnts/user/Users';
 import UserDetails from './compontnts/user/UserDetails';
 import Posts from './compontnts/post/Posts';
+import PostsParents from './compontnts/post/PostsParents';
+import PostDetails from './compontnts/post/PostDetails';
 
 const router = createBrowserRouter([
   {
@@ -43,10 +45,20 @@ const router = createBrowserRouter([
         ]
       },
       {
-        path: '/posts',
-        loader: () => fetch(`https://jsonplaceholder.typicode.com/posts`),
-        element: <Posts></Posts>,
-        
+        path: '/postparents',
+        element: <PostsParents></PostsParents>,
+        children: [
+          {
+            path: 'post',
+            loader: () => fetch(`https://jsonplaceholder.typicode.com/posts`),
+            element: <Posts></Posts>,
+          },
+          {
+            path: 'post/:postId',
+            loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+            element: <PostDetails></PostDetails>,
+          },
+        ]
       },
       {
         path: 'contact',
