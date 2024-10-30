@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import Header from './compontnts/Header';
 import About from './compontnts/About';
 import Contact from './compontnts/Contact';
+import User from './compontnts/User';
+import Antor from './compontnts/Antor';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'about',
-        element: <About></About>
+        element: <About></About>,
+        children: [
+          {
+            path: 'user',
+            element: <User></User>,
+            children: [
+              {
+                path: 'antor',
+                element: <Antor></Antor>
+              }
+            ]
+          }
+        ]
       },
       {
         path: 'contact',
