@@ -9,6 +9,7 @@ import Antor from './compontnts/Antor';
 import UserAll from './compontnts/user/UserAll';
 import Users from './compontnts/user/Users';
 import UserDetails from './compontnts/user/UserDetails';
+import Posts from './compontnts/post/Posts';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     element: <App></App>,
     children: [
       {
-        path: 'about',
+        path: '/about',
         element: <About></About>,
         children: [
           {
@@ -42,8 +43,14 @@ const router = createBrowserRouter([
         ]
       },
       {
+        path: '/posts',
+        loader: () => fetch(`https://jsonplaceholder.typicode.com/posts`),
+        element: <Posts></Posts>,
+        
+      },
+      {
         path: 'contact',
-        element: <Contact></Contact>
+        element: <Contact></Contact>,
       }
     ]
   },
