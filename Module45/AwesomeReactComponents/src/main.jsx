@@ -12,11 +12,13 @@ import UserDetails from './compontnts/user/UserDetails';
 import Posts from './compontnts/post/Posts';
 import PostsParents from './compontnts/post/PostsParents';
 import PostDetails from './compontnts/post/PostDetails';
+import ErrorPage from './compontnts/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/about',
