@@ -1,13 +1,16 @@
 import './App.css'
 import Header from './components/Header/Header'
-// import PriceOptions from './components/PricesOption/PriceOptions'
+import AllCharts from './components/Reachart/AllCharts'
+import PriceOption from './components/PricesOption/PriceOptions'
+
 
 function App() {
 
   return (
     <>
       <Header></Header>
-      {/* <PriceOptions /> */}
+      <PriceOption></PriceOption>
+      <AllCharts></AllCharts>
     </>
   )
 }

@@ -7,7 +7,6 @@ function Navbar() {
 
   return (
     <div>
-      <h1>IM From Nav...!</h1>
       <section className="flex text-2xl p-2 items-center gap-12 bg-yellow-500 rounded-lg text-white my-2">
         <div className="cursor-pointer md:hidden" onClick={() => setOpen(!open)}>
           {
