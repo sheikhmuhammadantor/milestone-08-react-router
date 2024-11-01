@@ -1,5 +1,6 @@
 import PageTitle from "../utility/PageTitle";
-import UseRefFrom from "./Form/UseRefFrom";
+import HookFrom from "./Form/HookFrom";
+// import UseRefFrom from "./Form/UseRefFrom";
 // import StateForm from "./Form/StateForm";
 // import SimpleForm from "./Form/SimpleForm";
 
@@ -13,7 +14,8 @@ export default function Home() {
 
       {/* <SimpleForm></SimpleForm> */}
       {/* <StateForm></StateForm> */}
-      <UseRefFrom></UseRefFrom>
+      {/* <UseRefFrom></UseRefFrom> */}
+      <HookFrom></HookFrom>
       
     </div>
   )
