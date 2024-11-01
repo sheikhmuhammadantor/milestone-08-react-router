@@ -1,7 +1,7 @@
 # Command
 
 ```bash
-npm create vite@latest my-project -- --template react
+npm create vite@latest myContext-Api -- --template react
 
 cd my-project
 
