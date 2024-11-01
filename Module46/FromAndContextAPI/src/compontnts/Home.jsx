@@ -1,5 +1,6 @@
 import PageTitle from "../utility/PageTitle";
-import SimpleForm from "./Form/SimpleForm";
+import StateForm from "./Form/StateForm";
+// import SimpleForm from "./Form/SimpleForm";
 
 export default function Home() {
   return (
@@ -8,7 +9,8 @@ export default function Home() {
       <PageTitle title={"Home"}></PageTitle>
 
       {/* Start Main Work */}
-      <SimpleForm></SimpleForm>
+      {/* <SimpleForm></SimpleForm> */}
+      <StateForm></StateForm>
       
     </div>
   )
